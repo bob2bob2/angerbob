@@ -1,0 +1,65 @@
+import turtle as trtl
+
+
+dino = trtl.Turtle ()
+dino.speed(0)
+dino.turtlesize(5)
+#dino.hideturtle()
+# chartreuse Fuchsia  (Hot Pink) (GhostWhite) GreenYellow (Olive) (OliveDrab) (DarkOrchid) (Lime Green) (#c233ff) (#00cc66) (#c28af0)
+#setting up drawing
+# define the foot, the tail, and the blanket*
+# Make tail like spikes tail
+# angle 450 for big fat head
+
+
+dino_colors = ['chartreuse', 'DarkOrchid']
+
+
+def his_tail(start_x, start_y, angle):
+    dino.goto(start_x, start_y)
+    dino.setheading(angle)
+    outline_color = dino_colors.pop(1)
+    dino.pencolor(outline_color)
+    dino.pensize(3)
+    dino_colors.append('#c28af0')
+
+
+
+dino.penup()
+his_tail(50, -10, 330)
+dino.pendown ()
+
+
+# start draw tail
+dino.fillcolor (dino_colors[-1])
+dino.begin_fill ()
+dino.circle (85,100)
+dino.stamp() # fix
+dino.setheading (290)
+dino.circle(-110,90)
+dino.goto(50, -10)
+dino.end_fill ()
+
+
+dino.penup ()
+
+
+
+
+
+
+dino.pendown()
+
+
+
+
+
+
+
+
+
+print('This is deeknow')
+
+
+wn = trtl.Screen ()
+wn.mainloop()
